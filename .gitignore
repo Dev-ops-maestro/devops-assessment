@@ -1,0 +1,17 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+
+# Database backup files
+backup_*.sql
+
+# Environment files
+*.env
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
