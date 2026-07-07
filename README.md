@@ -30,3 +30,15 @@ scripts/
 ```
 
 Further setup and execution instructions will be added as the implementation progresses.
+
+## Query Optimization
+
+Created composite index:
+
+(city, created_at, org_id, status)
+
+The index supports filtering by city and created_at and improves grouping operations by org_id and status.
+
+For the local dataset (100 rows), PostgreSQL chooses Sequential Scan because scanning the entire table is cheaper than using an index.
+
+For large production datasets, the composite index reduces full table scans and improves query performance.

@@ -15,3 +15,6 @@ backup_*.sql
 
 # macOS
 .DS_Store
+
+# Database backups
+backups/
