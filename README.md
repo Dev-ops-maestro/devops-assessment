@@ -42,3 +42,32 @@ The index supports filtering by city and created_at and improves grouping operat
 For the local dataset (100 rows), PostgreSQL chooses Sequential Scan because scanning the entire table is cheaper than using an index.
 
 For large production datasets, the composite index reduces full table scans and improves query performance.
+
+## Database Setup
+
+cd db
+docker compose up -d
+
+
+## Migration
+
+docker exec ...
+
+
+## Backup
+
+./scripts/backup.sh
+
+
+## Restore Verification
+
+./scripts/restore.sh backup.sql
+
+
+## Index Explanation
+
+Created composite index:
+
+(city, created_at, org_id, status)
+
+because query filters by city and created_at.
